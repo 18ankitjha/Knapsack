@@ -1,0 +1,109 @@
+.nav {
+  height: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  list-style: none;
+  background-color: #27262e;
+  color: #fff;
+}
+
+.nav .container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.nav ul {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contain {
+  width: 70%;
+  margin-bottom: 30px;
+  background: -webkit-gradient(linear, right top, left top, from(#2a2b20), color-stop(#998f8a), to(#171818));
+  background: linear-gradient(270deg, #2a2b20, #998f8a, #171818);
+  background-size: 600% 600%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  -webkit-animation: containergradient 30s ease infinite;
+  animation: containergradient 15s ease infinite;
+}
+
+@-webkit-keyframes containergradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes containergradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.accent-title {
+  font-size: 28px;
+  font-family: 'Anton', sans-serif;
+}
+
+body {
+  background-color: #201f28;
+  color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */
