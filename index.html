@@ -8,7 +8,7 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <link
       rel="apple-touch-icon"
-      sizes="180x180"
+      sizes="180x180"1
       href="../DAA_PRJ/favicon/favicon-32x32.png"
     />
     <link
@@ -52,16 +52,16 @@
       <div class="container">
         <div class="accent-title">DAA Project</div>
         <ul>
-          <li>Problem</li>
-          <li>Approach</li>
-          <li>Calculator</li>
-          <li>Application</li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#approaches">Approach</a></li>
+          <li><a href="#Calculator">Calculator</a></li>
+          <li><a href="#application">Application</a></li>
         </ul>
       </div>
     </header>
     <main>
       <div class="contain">
-        <div class="accent-title">
+        <div class="accent-title" id="problem">
           Problem Statement
         </div>
         <div>
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="contain">
-        <div class="accent-title">
+        <div class="accent-title"  id="approaches">
           Approach 1
         </div>
         <div>
@@ -87,14 +87,14 @@
         </div>
       </div>
 
-    </main>
+    </main >
 
 
     <section class="section section-dark rad">
       <div class="text-center page-header">
         <h2 id="kcap" class="grad8">KNAPSACK MAX PROFIT CALCULATOR</h2>
       </div>
-      <div class="container hide1">
+      <div class="container hide1" id="Calculator">
         <div class="row justify-content-md-center mrg1">
           <div class="col-md-6">
             <div class="input-group">
@@ -129,7 +129,7 @@
         <div class="text-center">
           <button
             type="button"
-            class="generateTable btn genr btn-success btn-grad"
+            class="generateTable btn genr btn-table btn-grad"
             onclick="createTable();"
           >
             Generate Table
@@ -139,7 +139,7 @@
         <div class="text-center">
           <button
             type="button"
-            class="generateResult btn btn-primary btn-grad2"
+            class="generateResult btn btn-calculate btn-grad2"
             id="butt"
             onclick="generateResult();"
           >
@@ -171,9 +171,9 @@
       </div>
 
       <main>
-        <div class="contain">
+        <div class="contain" id="#application">
           <div class="accent-title">
-            Problem Statement
+            Application
           </div>
           <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque blanditiis quae fuga numquam qui sed excepturi assumenda voluptates eos vel?

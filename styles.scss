@@ -24,6 +24,15 @@
         list-style: none;
         li{
             list-style: none;
+            a{
+                text-decoration: none;
+                outline: none;
+                cursor: pointer;
+                color: whitesmoke;
+              &:hover{
+                  color: grey;
+              }  
+            }
         }
     }
 
@@ -47,6 +56,21 @@ main{
     -webkit-animation: containergradient 30s ease infinite;
     -moz-animation: containergradient 30s ease infinite;
     animation: containergradient 15s ease infinite;
+}
+.container{
+    .btn-table{
+        background-color: orange;
+        width: 80%;
+        padding: 15px;
+        margin: 8px ;
+    }
+    .btn-calculate{
+        padding: 15px;
+        margin: 8px ;
+        background-color: orangered;
+        width: 80%;
+
+    }
 }
 @-webkit-keyframes containergradient {
     0%{background-position:0% 50%}
