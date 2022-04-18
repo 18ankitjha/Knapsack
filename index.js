@@ -106,7 +106,7 @@ function knapsackAlgorithm() {
         }
         else if(knapsackCapacity != 0) {
             knapsackResultantProfit = +knapsackResultantProfit + +(profit[i] * (knapsackCapacity / weight[i]))
-            tempList[tempList.indexOf(profit[i])] = knapsackCapacity + "/" + weight[i]
+            tempList[tempList.indexOf(profit[i])] = knapsackCapacity/weight[i];
             knapsackCapacity = 0
         }
         else {
