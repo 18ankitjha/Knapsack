@@ -1,5 +1,7 @@
 let num_rows
 let knapsackCapacity
+var m = 5, n=6;
+// console.log(array);
 
 function createTable() {
     knapsackCapacity = document.getElementById('capacity').value;
@@ -48,7 +50,6 @@ function generateResult() {
     knapsackResultantProfit = 0;
     profit = [];
     weight = [];
-    profit_weight = []
     tempList = []
 
     console.log(resultClass.length);
@@ -66,54 +67,29 @@ function generateResult() {
         weight.push(weightValue)        
     }
 
-    sortLists()
 
-    console.log("profit = " + profit);
-    console.log("weight = " + weight);
-    console.log("profit/weight = " + profit_weight);
     knapsackAlgorithm()
-    console.log(knapsackResultantProfit);
 }
 
 
-function sortLists() {
-
-    for (i = 0; i < num_rows; i++) {
-        profit_weight[i] = (profit[i] / weight[i])
-    }       
-    console.log(tempList);
-    let list = [];
-    for (i = 0; i < num_rows; i++)
-        list.push({ 'profit_weight': profit_weight[i], 'profit': profit[i], 'weight': weight[i] });
-
-    list.sort(function (a, b) {
-        return ((a.profit_weight > b.profit_weight) ? -1 : ((a.profit_weight == b.profit_weight) ? 0 : 1));
-    });
-
-    for (i = 0; i < num_rows; i++) {
-        profit_weight[i] = +(list[i].profit_weight).toFixed(3)
-        profit[i] = list[i].profit;
-        weight[i] = list[i].weight;
-    }
-}
 function knapsackAlgorithm() {
-
-    for (i = 0; i < num_rows; i++) {
-        if (weight[i] <= knapsackCapacity) {
-            knapsackCapacity -= weight[i]
-            knapsackResultantProfit += +profit[i]
-            tempList[tempList.indexOf(profit[i])] = 1
-        }
-        else if(knapsackCapacity != 0) {
-            knapsackResultantProfit = +knapsackResultantProfit + +(profit[i] * (knapsackCapacity / weight[i]))
-            tempList[tempList.indexOf(profit[i])] = knapsackCapacity/weight[i];
-            knapsackCapacity = 0
-        }
-        else {
-            tempList[tempList.indexOf(profit[i])] = 0
-        }
+        let dp = Array(profit?.length+1).fill().map((i) =>{
+            i = Array(Number(knapsackCapacity)+1).fill(0)
+            return i;
+          });
+          
+  for (let i = 1; i <= profit.length; i++) {
+    
+    for (let j = 0; j <= knapsackCapacity; j++) {
+      if (weight[i-1] > j) {
+        dp[i][j] = dp[i-1][j];
+      } else {
+        dp[i][j] = Math.max(dp[i-1][j], Number(dp[i-1][j-weight[i-1]]) + Number(profit[i-1]));
+      }
     }
-
+  }
+  console.log(dp);
+  knapsackResultantProfit=dp[profit.length][knapsackCapacity];
     kpResultantProfitId.innerHTML = +knapsackResultantProfit.toFixed(3)
     kpProfitId.innerHTML = profit
     kpWeightId.innerHTML = weight

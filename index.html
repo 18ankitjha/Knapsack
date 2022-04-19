@@ -68,6 +68,38 @@
       <div class="contain">
         <div class="accent-title">Problem Statement</div>
         <div>
+<<<<<<< HEAD
+          Given weights and values of n items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack
+        </div>
+      </div>
+      <div class="contain">
+        <div class="accent-title">
+          Brute Force
+        </div>
+        <div>
+          01 knapsnack is the most basic problem to understand 2-d 
+          Dynamic programming.AS we have designed a O1 knapsack calculator ,Here is a brief overview of it
+          Brute force approach-Aim for this problem is to find a subset of weight array which maximizes the profit .so for each entity we have option to whether select it or not.
+          So start with either first or last element for example         weight array wt[]={2,7,3,4},weight of knapsack -11 and profit array pr[]={5,20,20,10)
+          Let f(x,y) denote that we have x elements to choose from and y is the weight left in knapsack.so problem can be break down recursively as
+          
+          F(4,11)=max(inc,exc)  i.e 
+          Inc= price[0]+f(3,11-wt[0])
+          Exc=f(3,11)
+          As it is a recursive method .it will take lot of computational time .TO solve this problem we will optimize it with dp
+          
+          
+        </div>
+      </div>
+      <div class="contain">
+        <div class="accent-title">
+          DP Approach
+        </div>
+        <div>
+          In every recursive function call we will pass a dp[][] array .
+          Dp[x][y]=means f(x,y)
+          If dp[x][y]!=-1 then we already have f(x,y) thus saves some computation otherwise call f(x,y).
+=======
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           blanditiis quae fuga numquam qui sed excepturi assumenda voluptates
           eos vel?
@@ -99,6 +131,7 @@
           libero, nihil minus rerum dolore molestiae, eius alias excepturi
           pariatur dignissimos nulla quidem. Aperiam saepe non, perferendis
           commodi inventore dolor.
+>>>>>>> 74b69491f601649ceb36ecd7b6905a783c42c69c
         </div>
       </div>
     </main>
@@ -173,10 +206,10 @@
               <h2 id="kpProfit" class="gradx"></h2>
               <h4>Weight</h4>
               <h2 id="kpWeight" class="gradx"></h2>
-              <h4>Profit / Weight</h4>
-              <h2 id="kpProfitWeight" class="gradx"></h2>
-              <h4>Resultant Solution</h4>
-              <h2 id="kpResultantSolution" class="gradx"></h2>
+              <!-- <h4>Profit / Weight</h4>
+              <h2 id="kpProfitWeight" class="gradx"></h2> -->
+              <!-- <h4>Resultant Solution</h4>
+              <h2 id="kpResultantSolution" class="gradx"></h2> -->
               <h4>Max Profit</h4>
               <h2 id="kpResultantProfit" class="gradx"></h2>
             </div>
@@ -185,15 +218,29 @@
       </div>
 
       <main>
+<<<<<<< HEAD
+        <!-- <div class="contain">
+          <div class="accent-title">
+            Problem Statement
+          </div>
+=======
         <div id="application"></div>
         <div class="contain">
           <div class="accent-title" >Application</div>
+>>>>>>> 74b69491f601649ceb36ecd7b6905a783c42c69c
           <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             blanditiis quae fuga numquam qui sed excepturi assumenda voluptates
             eos vel?
           </div>
+<<<<<<< HEAD
+        </div> -->
+        
+        
+  
+=======
         </div>
+>>>>>>> 74b69491f601649ceb36ecd7b6905a783c42c69c
       </main>
     </section>
 
